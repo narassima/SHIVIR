@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SHIVIR Simulator</title>
+<title>SHIVIR (Susceptible, Hospitalized, Infected, Ventilator, ICU, Recovered, Immune)</title>
 <style>
 :root {
   color-scheme: light;
@@ -42,6 +42,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 header.top { display: flex; align-items: center; gap: 10px; padding: 9px 16px; border-bottom: 1px solid var(--border); background: var(--panel); position: sticky; top: 0; z-index: 30; height: 56px; }
 header.top h1 { font-size: 17px; margin: 0; font-weight: 650; }
 header.top .sub { color: var(--text-2); font-size: 12.5px; }
+header.top .titles { min-width: 0; }
+header.top .titles h1, header.top .titles .sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 header.top .spacer { flex: 1; }
 .btn { border: 1px solid var(--border); background: var(--surface); border-radius: 7px; padding: 6px 12px; cursor: pointer; white-space: nowrap; }
 .btn:hover { border-color: var(--accent); }
@@ -184,9 +186,9 @@ table.data td.l, table.data th.l { text-align: left; }
 </head>
 <body>
 <header class="top">
-  <div>
-    <h1>SHIVIR Simulator</h1>
-    <div class="sub">Agent-based model of COVID-19 transmission with ward, ICU and ventilator demand</div>
+  <div class="titles" title="SHIVIR (Susceptible, Hospitalized, Infected, Ventilator, ICU, Recovered, Immune): Agent-based Model of COVID-19 transmission with Ward, ICU and Ventilator demand">
+    <h1>SHIVIR (Susceptible, Hospitalized, Infected, Ventilator, ICU, Recovered, Immune)</h1>
+    <div class="sub">Agent-based Model of COVID-19 transmission with Ward, ICU and Ventilator demand</div>
   </div>
   <div class="spacer"></div>
   <button class="btn small" id="guideBtn" title="Open the how-to-use guide">How to use</button>
